@@ -38,14 +38,21 @@
     <!-- Template CSS -->
     <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}">
     <link rel="stylesheet" type="text/css" href="{% static 'css/reponsive.css' %}">
+    {% block extra_css %}{% endblock %}
 </head>
 
 <body {% block id %}{% endblock %}>
-    {% include 'layout/header-base.html' %}
 
-    {% block content %}{% endblock %}
+        {% url 'pages:home' as home_url %}
+        {% if request.path == home_url %}
+            {% include 'layout/header-home.html' %}
+        {% else %}
+            {% include 'layout/header-base.html' %}
+        {% endif %}
 
-    {% include 'layout/footer.html' %}
+        {% block content %}{% endblock %}
+
+        {% include 'layout/footer.html'%}
 
     <!-- back top top -->
     <div class="back-to-top">
@@ -80,6 +87,7 @@
 
     <!-- Template JS -->
     <script src="{% static 'js/theme.js' %}"></script>
+    {% block extra_js %}{% endblock %}
 </body>
 
 

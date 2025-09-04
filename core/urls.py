@@ -24,7 +24,7 @@ urlpatterns = [
     path('admin/', admin.site.urls),
 
     path('blogs/', include('apps.blogs.urls', namespace='blogs')),
-    # path('', include('apps.pages.urls', namespace='pages')),
+    path('', include('apps.pages.urls', namespace='pages')),
 ]
 
 if settings.DEBUG:
