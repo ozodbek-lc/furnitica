@@ -40,6 +40,7 @@ INSTALLED_APPS = [
 
     'apps.pages',
     'apps.blogs',
+    'apps.products',
 
     'django_extensions',
     "ckeditor",
