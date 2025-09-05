@@ -27,3 +27,7 @@ def contact_page_view(request):
 
     else:
         return render(request, 'contact.html',)
+
+
+def about_page_view(request):
+    return render(request, 'about-us.html')
