@@ -23,6 +23,7 @@ def blogs_list_view(request):
         context
     )
 
+
 def blogs_detail_view(request,pk):
     try:
         blog = BlogModel.objects.get(id=pk)
@@ -34,8 +35,6 @@ def blogs_detail_view(request,pk):
 
     context = {
         "blog":blog,
-        "categories": categories,
-        "tags": tags,
     }
     return render(
         request,'blog-detail.html',
