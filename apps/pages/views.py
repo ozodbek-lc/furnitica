@@ -4,7 +4,7 @@ from apps.pages.forms import ContactForm
 
 
 def home_page_view(request):
-    return render(request, 'home.html')
+    return render(request, 'home3.html')
 
 
 def contact_page_view(request):
@@ -23,7 +23,7 @@ def contact_page_view(request):
             context = {
                 "errors": errors
             }
-            return render(request, 'pages/contact.html', context)
+            return render(request, 'contact.html', context)
 
     else:
-        return render(request, 'pages/contact.html')
+        return render(request, 'contact.html',)

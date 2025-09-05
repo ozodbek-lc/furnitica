@@ -40,6 +40,10 @@ INSTALLED_APPS = [
 
     'apps.pages',
     'apps.blogs',
+
+    'django_extensions',
+    "ckeditor",
+    "ckeditor_uploader",
 ]
 
 MIDDLEWARE = [
@@ -124,6 +128,14 @@ STATICFILES_DIRS =(BASE_DIR / 'assets/',)
 
 MEDIA_URL = 'media/'
 MEDIA_ROOT = BASE_DIR / 'media/'
+
+CKEDITOR_UPLOAD_PATH = "uploads/"
+
+CKEDITOR_CONFIGS = {
+    'default': {
+        'toolbar': 'full',
+    },
+}
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/5.2/ref/settings/#default-auto-field
