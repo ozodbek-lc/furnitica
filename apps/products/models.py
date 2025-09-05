@@ -48,8 +48,9 @@ class TagModel(BaseModel):
 
 class ProductModel(BaseModel):
     title = models.CharField(max_length=200)
+    image1 = models.ImageField(upload_to='products/')
+    image2 = models.ImageField(upload_to='products/')
     price = models.DecimalField(max_digits=10, decimal_places=2)
-    image = models.ImageField(upload_to='products/')
     category = models.ForeignKey(CategoryModel, on_delete=models.CASCADE)
     catalog = models.ForeignKey(CatalogModel, on_delete=models.CASCADE)
     description = models.TextField(blank=True)
