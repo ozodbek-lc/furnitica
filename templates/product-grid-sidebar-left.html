@@ -15,18 +15,18 @@
                                 <div class="breadcrumb">
                                     <ol>
                                         <li>
-                                            <a href="#">
+                                            <a href="{% url 'pages:home' %}">
                                                 <span>Home</span>
                                             </a>
                                         </li>
                                         <li>
-                                            <a href="#">
+                                            <a href="{% url 'products:grid' %}">
                                                 <span>Living Room</span>
                                             </a>
                                         </li>
                                         <li>
-                                            <a href="#">
-                                                <span>Sofa</span>
+                                            <a href="{% url 'blogs:list' %}">
+                                                <span>Blog</span>
                                             </a>
                                         </li>
                                     </ol>
@@ -65,7 +65,7 @@
                                             </div>
                                         </div>
 
-                                        <!-- best seller -->
+                                         best seller
                                         <div class="sidebar-block">
                                             <div class="title-block">Catalog</div>
                                             {% for catalog in catalogs %}
@@ -183,7 +183,7 @@
                                                                 <a href="product-detail.html">
                                                                     <img class="img-fluid image-cover" src="{% static 'img/product/1.jpg' %}" alt="img">
                                                                     <img class="img-fluid image-secondary" src="{% static 'img/product/22.jpg' %}" alt="img">
-<!--                                                                </a>-->
+                                                                </a>
                                                                 <div class="highlighted-informations">
                                                                     <div class="variant-links">
                                                                         <a href="#" class="color beige" title="Beige"></a>
@@ -773,7 +773,7 @@
                                                                     <div class="product-description">
                                                                         <div class="product-groups">
                                                                             <div class="product-title">
-                                                                                <a href="product-detail.html">Nulla et justo non augue</a>
+                                                                                <a href="product-detail.html">Nulla et justo non </a>
                                                                                 <span class="info-stock">
                                                                                     <i class="fa fa-check-square-o" aria-hidden="true"></i>
                                                                                     In Stock

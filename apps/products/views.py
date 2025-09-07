@@ -20,13 +20,5 @@ def product_grid_view(request):
     })
 
 
-def product_detail_view(request, pk):
-    product = get_object_or_404(ProductModel, pk=pk)
-
-    return render(request, 'product-detail.html', {
-        'product': product
-    })
-
-
-def page_404(request, exception):
-    return render(request, '404.html', status=404)
+def product_detail_view(request):
+    return render(request, 'product-detail.html')

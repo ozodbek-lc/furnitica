@@ -16,18 +16,18 @@
                                 <div class="breadcrumb">
                                     <ol>
                                         <li>
-                                            <a href="#">
+                                            <a href="{% url 'pages:home' %}">
                                                 <span>Home</span>
                                             </a>
                                         </li>
                                         <li>
-                                            <a href="#">
+                                            <a href="{% url 'products:grid' %}">
                                                 <span>Living Room</span>
                                             </a>
                                         </li>
                                         <li>
-                                            <a href="#">
-                                                <span>Sofa</span>
+                                            <a href="{% url 'blogs:list' %}">
+                                                <span>Blog</span>
                                             </a>
                                         </li>
                                     </ol>
@@ -50,7 +50,6 @@
                                                             <i class="zmdi zmdi-plus"></i>
                                                         </span>
                                                         <a class="cateItem" href="#">{{ cat.title }}</a>
-
                                                         <div class="subCategory collapse" id="cat{{ forloop.counter }}" aria-expanded="true" role="status">
                                                             {% if cat.subcategories.all %}
                                                                 {% for sub in cat.subcategories.all %}
@@ -106,12 +105,12 @@
                                             <div class="list-content row">
                                             <div class="hover-after col-md-5 col-xs-12">
                                                 <a href="">
-                                                    <img src="{{ blog.image.url }}">
+                                                    <img src="{{ blog.image1.url }}">
                                                 </a>
                                             </div>
                                             <div class="late-item col-md-7 col-xs-12">
                                                 <p class="content-title">
-                                                    <a href="blog-detail.html">{{ blog.title }}</a>
+                                                    <a href="{% url 'blogs:detail' blog.pk %}">{{ blog.title }}</a>
                                                 </p>
                                                 <p class="post-info">
                                                     <span>3 minitunes ago</span>
@@ -122,7 +121,7 @@
                                                 <p>{{ blog.content|slice:":50" }}</p>
 
                                                 <span class="view-more">
-                                                    <a href="blog-detail.html">view more</a>
+                                                    <a href="{% url 'blogs:detail' blog.pk %}">view more</a>
                                                 </span>
                                             </div>
                                         </div>

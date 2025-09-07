@@ -42,9 +42,11 @@ class BlogModel(BaseModel):
         DRAFT = 'DRAFT'
         PUBLISHED = 'PUBLISHED'
         DELETED = 'DELETED'
-    image = models.ImageField(upload_to='blog-post/')
+    image1 = models.ImageField(upload_to='blog-post/')
+    image2 = models.ImageField(upload_to='blog-post/')
     title = models.CharField(max_length=128)
-    content = RichTextUploadingField()
+    content1 = RichTextUploadingField()
+    content2 = RichTextUploadingField()
     views_count = models.PositiveIntegerField(default=1)
 
     status = models.CharField(
