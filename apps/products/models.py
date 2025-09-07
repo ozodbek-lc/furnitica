@@ -54,6 +54,8 @@ class ProductModel(BaseModel):
     category = models.ForeignKey(CategoryModel, on_delete=models.CASCADE)
     catalog = models.ForeignKey(CatalogModel, on_delete=models.CASCADE)
     description = models.TextField(blank=True)
+    views_count = models.PositiveIntegerField(default=1)
+    content = models.CharField(max_length=128)
 
     colors = models.ManyToManyField(ColorModel, blank=True)
     tags = models.ManyToManyField(TagModel, blank=True)

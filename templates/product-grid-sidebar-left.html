@@ -65,21 +65,21 @@
                                             </div>
                                         </div>
 
-                                         best seller
+                                        <!-- best seller -->
                                         <div class="sidebar-block">
                                             <div class="title-block">Catalog</div>
                                             {% for catalog in catalogs %}
-                                            <div class="new-item-content">
+                                                <div class="new-item-content">
                                                 <h3 class="title-product">{{ catalog.title }}</h3>
                                                 <ul class="scroll-product">
-                                                    {% for catalog in catalogs %}
-                                                    <li>
+                                                    {% for cat in categories %}
+                                                        <li>
                                                         <label class="check">
                                                             <input type="checkbox">
                                                             <span class="checkmark"></span>
                                                         </label>
                                                         <a href="#">
-                                                            <b>{{ catalog.title }}</b>
+                                                            <b>{{ cat.title }}</b>
                                                             <span class="quantity">(30)</span>
                                                         </a>
                                                     </li>
@@ -108,15 +108,7 @@
                                                     <div>
                                                     <span class="left">
                                                         <label class="color-item1"></label>
-                                                        <a href="#">
-                                                            <span>{{ color.title }}
-                                                                <span>(30)</span>
-                                                            </span>
-                                                        </a>
-                                                    </span>
-                                                    <span class="right">
-                                                        <label class="color-item2"></label>
-                                                        <a href="#">
+                                                        <a href="{% url 'products:grid' %}">
                                                             <span>{{ color.title }}
                                                                 <span>(30)</span>
                                                             </span>
@@ -145,57 +137,27 @@
                                     </div>
                                     <div class="col-sm-8 col-lg-9 col-md-8 product-container">
                                         <h1>Lingving Room</h1>
-                                        <div class="js-product-list-top firt nav-top">
-                                            <div class="d-flex justify-content-around row">
-                                                <div class="col col-xs-12">
-                                                    <ul class="nav nav-tabs">
-                                                        <li>
-                                                            <a href="#grid" data-toggle="tab" class="active show fa fa-th-large"></a>
-                                                        </li>
-                                                        <li>
-                                                            <a href="#list" data-toggle="tab" class="fa fa-list-ul"></a>
-                                                        </li>
-                                                    </ul>
-                                                </div>
-                                                <div class="col col-xs-12">
-                                                    <div class="d-flex sort-by-row justify-content-lg-end justify-content-md-end">
-
-                                                        <div class="products-sort-order dropdown">
-                                                            <select class="select-title">
-                                                                <option value="">Sort by</option>
-                                                                <option value="">Name, A to Z</option>
-                                                                <option value="">Name, Z to A</option>
-                                                                <option value="">Price, low to high</option>
-                                                                <option value="">Price, high to low</option>
-                                                            </select>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
                                         <div class="tab-content product-items">
                                             <div id="grid" class="related tab-pane fade in active show">
                                                 <div class="row">
-                                                    {% for image in images %}
+                                                    {% for product in products %}
                                                         <div class="item text-center col-md-4">
                                                         <div class="product-miniature js-product-miniature item-one first-item">
                                                             <div class="thumbnail-container border">
-                                                                <a href="product-detail.html">
-                                                                    <img class="img-fluid image-cover" src="{% static 'img/product/1.jpg' %}" alt="img">
-                                                                    <img class="img-fluid image-secondary" src="{% static 'img/product/22.jpg' %}" alt="img">
+                                                                <a href="{% url 'products:detail' product.pk %}">
+                                                                    <img class="img-fluid image-cover" src="{{ product.image1.url }}" alt="img">
+                                                                    <img class="img-fluid image-secondary" src="{{ product.image2.url }}" alt="img">
                                                                 </a>
                                                                 <div class="highlighted-informations">
                                                                     <div class="variant-links">
-                                                                        <a href="#" class="color beige" title="Beige"></a>
-                                                                        <a href="#" class="color orange" title="Orange"></a>
-                                                                        <a href="#" class="color green" title="Green"></a>
+                                                                        <a href="{% url 'products:detail' product.pk %}" class="color beige" title="Beige"></a>
                                                                     </div>
                                                                 </div>
                                                             </div>
                                                             <div class="product-description">
                                                                 <div class="product-groups">
                                                                     <div class="product-title">
-                                                                        <a href="product-detail.html">Nulla et justo non augue</a>
+                                                                        <a href="{% url 'products:detail' product.pk %}">{{ product.title }}</a>
                                                                     </div>
                                                                     <div class="rating">
                                                                         <div class="star-content">
@@ -208,7 +170,7 @@
                                                                     </div>
                                                                     <div class="product-group-price">
                                                                         <div class="product-price-and-shipping">
-                                                                            <span class="price">£28.08</span>
+                                                                            <span class="price">{{ product.price }}</span>
                                                                         </div>
                                                                     </div>
                                                                 </div>
@@ -249,7 +211,7 @@
                                                                     <div class="product-description">
                                                                         <div class="product-groups">
                                                                             <div class="product-title">
-                                                                                <a href="product-detail.html">Nulla et justo non augue</a>
+                                                                                <a href="product-detail.html">{{ product.title }}</a>
                                                                                 <span class="info-stock">
                                                                                     <i class="fa fa-check-square-o" aria-hidden="true"></i>
                                                                                     In Stock
@@ -773,7 +735,7 @@
                                                                     <div class="product-description">
                                                                         <div class="product-groups">
                                                                             <div class="product-title">
-                                                                                <a href="product-detail.html">Nulla et justo non </a>
+                                                                                <a href="product-detail.html">Nulla et justo non augue</a>
                                                                                 <span class="info-stock">
                                                                                     <i class="fa fa-check-square-o" aria-hidden="true"></i>
                                                                                     In Stock
