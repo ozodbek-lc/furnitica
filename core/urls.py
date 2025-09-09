@@ -20,15 +20,18 @@ from django.conf.urls.static import static
 from django.contrib import admin
 from django.urls import path,include
 
-urlpatterns = [
-    path('admin/', admin.site.urls),
+from django.conf.urls.i18n import i18n_patterns
 
+urlpatterns = [
+    path("ckeditor/", include("ckeditor_uploader.urls")),
+]
+
+urlpatterns += i18n_patterns(
+    path('admin/', admin.site.urls),
     path('blogs/', include('apps.blogs.urls', namespace='blogs')),
     path('products/', include('apps.products.urls', namespace='products')),
     path('', include('apps.pages.urls', namespace='pages')),
-
-    path("ckeditor/", include("ckeditor_uploader.urls")),
-]
+)
 
 if settings.DEBUG:
     urlpatterns += static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)

@@ -11,34 +11,45 @@ def product_cart_view(request):
 
 
 def product_grid_view(request):
-    product = ProductModel.objects.all()
+    products = ProductModel.objects.all()
     categories = CategoryModel.objects.all()
     catalogs = CatalogModel.objects.all()
     tags = TagModel.objects.all()
     colors = ColorModel.objects.all()
 
-    return render(request, 'product-grid-sidebar-left.html', {
-        'products': product,
+
+    cat_id = request.GET.get('cat')
+    if cat_id:
+        products = products.filter(category_id=cat_id)
+    context = {
+        'products': products,
         'categories': categories,
         'catalogs': catalogs,
         'tags': tags,
-        'color': colors,
-    })
+        'colors': colors,
+    }
+
+    return render(request,
+                  'product-grid-sidebar-left.html',
+                  context
+                  )
 
 
 def product_detail_view(request,pk):
     try:
-        product = ProductModel.objects.get(id=pk)
+        products = ProductModel.objects.get(id=pk)
     except ProductModel.DoesNotExist:
         return render(request, '404.html')
 
     categories = CategoryModel.objects.all()
     tags = TagModel.objects.all()
+    colors = ColorModel.objects.all()
 
     context = {
-        "products": product,
+        "product": products,
         "categories": categories,
         "tags": tags,
+        'colors': colors,
     }
     return render(
         request, 'product-detail.html',
