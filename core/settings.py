@@ -25,12 +25,13 @@ SECRET_KEY = 'django-insecure-_g9-h)#j+oco77hx8sfx1#s9n-f3)_6f$_r9@#7lcz(uw0t9a5
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition
 
 INSTALLED_APPS = [
+    'modeltranslation',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -117,6 +118,7 @@ LANGUAGES = (
     ('uz', 'Uzbek'),
 )
 LOCALE_PATHS = [BASE_DIR / 'locale', ]
+MODELTRANSLATION_DEFAULT_LANGUAGE = 'en'
 
 
 TIME_ZONE = 'UTC'

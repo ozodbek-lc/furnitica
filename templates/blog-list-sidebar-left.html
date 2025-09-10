@@ -49,17 +49,17 @@
                                                             <i class="zmdi zmdi-minus"></i>
                                                             <i class="zmdi zmdi-plus"></i>
                                                         </span>
-                                                        <a class="cateItem" href="#">{{ cat.title }}</a>
+                                                        <a class="cateItem" href="?cat{{ cat.id }}">{{ cat.title }}</a>
                                                         <div class="subCategory collapse" id="cat{{ forloop.counter }}" aria-expanded="true" role="status">
                                                             {% if cat.subcategories.all %}
                                                                 {% for sub in cat.subcategories.all %}
                                                                     <div class="cateTitle">
-                                                                        <a href="#" class="cateItem">{{ sub.title }}</a>
+                                                                        <a href="?cat{{ cat.id }}" class="cateItem">{{ sub.title }}</a>
                                                                     </div>
                                                                 {% endfor %}
                                                             {% else %}
                                                                 <div class="cateTitle">
-                                                                    <a href="#" class="cateItem">No subcategories</a>
+                                                                    <a onclick="addUrlParameter('cat',{{ cat.id }})" class="cateItem">No subcategories</a>
                                                                 </div>
                                                             {% endif %}
                                                         </div>
@@ -80,7 +80,7 @@
 
                                                     {% for tag in tags %}
                                                         <li>
-                                                        <a href="#" title="Show products matching tag Hot Trend">{{ tag.title }}</a>
+                                                        <a onclick="addUrlParameter('tag',{{ tag.id }})" title="Show products matching tag Hot Trend">{{ tag.title }}</a>
                                                     </li>
                                                     {% endfor %}
 
@@ -104,7 +104,7 @@
                                         {% for blog in blogs %}
                                             <div class="list-content row">
                                             <div class="hover-after col-md-5 col-xs-12">
-                                                <a href="">
+                                                <a href="{% url 'blogs:detail' blog.pk %}">
                                                     <img src="{{ blog.image1.url }}">
                                                 </a>
                                             </div>

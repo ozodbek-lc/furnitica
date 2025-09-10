@@ -7,6 +7,18 @@ class BaseModel(models.Model):
     class Meta:
         abstract = True
 
+class AuthorModel(BaseModel):
+    full_name = models.CharField(max_length=128)
+    title = models.CharField(max_length=128)
+    bio = models.TextField()
+
+    def __str__(self):
+        return self.title
+
+    class Meta:
+        verbose_name='Author'
+        verbose_name_plural='Authors'
+
 class ContactModel(BaseModel):
     full_name = models.CharField(max_length=128)
     email = models.EmailField()
@@ -28,3 +40,16 @@ class ContactModel(BaseModel):
     class Meta:
         verbose_name='Contact'
         verbose_name_plural='Contacts'
+
+class AboutModel(BaseModel):
+    title = models.CharField(max_length=127)
+    image = models.ImageField(upload_to='About/')
+    content = models.TextField()
+    author = models.ForeignKey(AuthorModel,on_delete=models.CASCADE,related_name='blogs')
+
+    def __str__(self):
+        return self.title
+
+    class Meta:
+        verbose_name='About'
+        verbose_name_plural='Abouts'

@@ -1,6 +1,7 @@
 from django.shortcuts import render, redirect
 
 from apps.pages.forms import ContactForm
+from apps.pages.models import AboutModel
 
 
 def home_page_view(request):
@@ -30,4 +31,8 @@ def contact_page_view(request):
 
 
 def about_page_view(request):
-    return render(request, 'about-us.html')
+    abouts = AboutModel.objects.all()
+    context = {
+        'abouts': abouts,
+    }
+    return render(request, 'about-us.html',context)

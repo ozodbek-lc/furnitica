@@ -1,9 +1,4 @@
-from datetime import timedelta
-
-from django.db.models import Count
 from django.shortcuts import render
-from django.utils import timezone
-
 from apps.blogs.models import BlogModel, BlogCategoryModel, BlogTagModel
 
 
@@ -13,6 +8,13 @@ def blogs_list_view(request):
     blogs = BlogModel.objects.filter(
         status=BlogModel.BlogStatus.PUBLISHED
     )
+
+    cat_id = request.GET.get('cat')
+    if cat_id:
+        blogs = blogs.filter(category_id=cat_id)
+    tag_id = request.GET.get('tag')
+    if cat_id:
+        blogs = blogs.filter(category_id=tag_id)
     context = {
         "blogs":blogs,
         "categories": categories,
@@ -26,15 +28,18 @@ def blogs_list_view(request):
 
 def blogs_detail_view(request,pk):
     try:
-        blog = BlogModel.objects.get(id=pk)
+        blogs = BlogModel.objects.get(id=pk)
     except BlogModel.DoesNotExist:
         return render(request,'404.html')
 
     categories = BlogCategoryModel.objects.all()
     tags = BlogTagModel.objects.all()
 
+
     context = {
-        "blog":blog,
+        "blog":blogs,
+        "categories": categories,
+        "tags": tags,
     }
     return render(
         request,'blog-detail.html',
