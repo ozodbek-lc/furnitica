@@ -1,5 +1,6 @@
 {% extends 'layout/base.html' %}
 {% load static %}
+{% load i18n %}
 {% block title %}Contact{% endblock %}
 {% block id %}id="contact" class="blog"{% endblock %}
 {% block content %}
@@ -14,13 +15,13 @@
                         <div class="breadcrumb">
                             <ol>
                                 <li>
-                                    <a href="#">
-                                        <span>Home</span>
+                                    <a href="{% url 'pages:home' %}">
+                                        <span>{% trans 'Home' %}</span>
                                     </a>
                                 </li>
                                 <li>
-                                    <a href="#">
-                                        <span>Contact</span>
+                                    <a href="{% url 'pages:contact' %}">
+                                        <span>{% trans 'Contact' %}</span>
                                     </a>
                                 </li>
                             </ol>
@@ -30,7 +31,7 @@
                 <div id="main">
                     <div class="page-home">
                         <div class="container">
-                            <h1 class="text-center title-page">Contact Us</h1>
+                            <h1 class="text-center title-page">{% trans 'Contact Us' %}</h1>
                             <div class="row-inhert">
                                 <div class="header-contact">
                                     <div class="row">
@@ -59,10 +60,12 @@
                                                     </div>
                                                 </div>
                                                 <div class="item-right d-flex">
-                                                    <div class="title">Address:</div>
+                                                    <div class="title">{% trans 'Address' %}:</div>
                                                     <div class="contact-content">
-                                                        23 Suspendis matti, Visaosang Building
-                                                        <br>District, NY Accums, North American
+                                                        {% blocktrans %}
+                                                        "23 Suspendis matti, Visaosang Building
+                                                        <br>District, NY Accums, North American"
+                                                        {% endblocktrans %}
                                                     </div>
                                                 </div>
                                             </div>
@@ -75,7 +78,7 @@
                                                     </div>
                                                 </div>
                                                 <div class="item-right d-flex">
-                                                    <div class="title">Hotline:</div>
+                                                    <div class="title">{% trans 'Hotline' %}:</div>
                                                     <div class="contact-content">
                                                         0123-456-78910
                                                         <br>0987-654-32100
@@ -90,9 +93,12 @@
                                     <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d6536.4335016518435!2d69.24255514659808!3d41.30955356891825!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x38ae8b084eab8999%3A0xb2d2bdd029eeec98!2sXalqlar%20Do&#39;stligi!5e0!3m2!1sen!2s!4v1756977417651!5m2!1sen!2s" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>                                    </div>
                                 </div>
                                 <div class="input-contact">
-                                    <p class="text-intro text-center">“Proin gravida nibh vel velit auctor aliquet. Aenean sollicudin, lorem quis bibendum
+                                    <p class="text-intro text-center">
+                                        {% blocktrans %}
+                                        Proin gravida nibh vel velit auctor aliquet. Aenean sollicudin, lorem quis bibendum
                                         auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit. Duis sed odio sit
-                                        amet nibh vultate cursus a sit amet mauris. Proin gravida nibh vel velit auctor aliquet.”
+                                        amet nibh vultate cursus a sit amet mauris. Proin gravida nibh vel velit auctor aliquet.
+                                        {% endblocktrans %}
                                     </p>
 									
                                     <p class="icon text-center">
@@ -129,7 +135,7 @@
                                                     <div>
                                                         <button class="btn" type="submit" name="submitMessage">
                                                             <img class="img-fl" src="{% static 'img/other/contact_email.png' %}" alt="img">
-                                                            Send message
+                                                            {% trans 'Send message' %}
                                                         </button>
                                                     </div>
                                                 </form>

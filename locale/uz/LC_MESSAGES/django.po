@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-09-10 06:41+0000\n"
+"POT-Creation-Date: 2025-09-10 09:18+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -17,6 +17,133 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
+
+#: templates/blog-detail.html:21 templates/blog-list-sidebar-left.html:20
+#: templates/contact.html:19 templates/layout/header-base.html:108
+#: templates/layout/header-home.html:98
+msgid "Home"
+msgstr "Asosiy"
+
+#: templates/blog-detail.html:26 templates/blog-list-sidebar-left.html:25
+msgid "Living Room"
+msgstr "Mehmonxona"
+
+#: templates/blog-detail.html:31 templates/blog-list-sidebar-left.html:30
+#, fuzzy
+#| msgid "Blogs"
+msgid "Blog"
+msgstr "Bloglar"
+
+#: templates/blog-detail.html:45 templates/blog-list-sidebar-left.html:44
+msgid "Categories"
+msgstr "Kategoriyalar"
+
+#: templates/blog-detail.html:80 templates/blog-list-sidebar-left.html:76
+#, fuzzy
+#| msgid "Blogs"
+msgid "Blog Tags"
+msgstr "Bloglar"
+
+#: templates/blog-detail.html:151
+msgid "SEN TO A FRIEND"
+msgstr "DO'STIMGA YUBORILGAN"
+
+#: templates/blog-detail.html:155
+msgid "Print"
+msgstr "Chop etish"
+
+#: templates/blog-detail.html:170
+msgid "Administrator, Web Designer"
+msgstr "Administrator, veb-dizayner"
+
+#: templates/blog-list-sidebar-left.html:102
+msgid "Recent Posts"
+msgstr "Oxirgi xabarlar"
+
+#: templates/blog-list-sidebar-left.html:116
+msgid "3 minitunes ago"
+msgstr "3 daqiqa oldin"
+
+#: templates/blog-list-sidebar-left.html:117
+msgid "113 Comments"
+msgstr "113 izoh"
+
+#: templates/blog-list-sidebar-left.html:118
+msgid "TIVATHEME"
+msgstr "TIVATEME"
+
+#: templates/blog-list-sidebar-left.html:134
+msgid "Previous"
+msgstr "Oldingi"
+
+#: templates/contact.html:24 templates/layout/header-base.html:120
+#: templates/layout/header-home.html:110
+msgid "Contact"
+msgstr "Aloqa"
+
+#: templates/contact.html:34 templates/layout/footer.html:55
+#, fuzzy
+#| msgid "Contact"
+msgid "Contact Us"
+msgstr "Aloqa"
+
+#: templates/contact.html:63
+#, fuzzy
+#| msgid "Address :"
+msgid "Address"
+msgstr "Manzil :"
+
+#: templates/contact.html:65
+#, fuzzy
+#| msgid ""
+#| "\n"
+#| "                                            Sign up to our newsletter to "
+#| "get the latest articles, lookbooks voucher codes direct\n"
+#| "                                        to your inbox\n"
+#| "                                        "
+msgid ""
+"\n"
+"                                                        \"23 Suspendis "
+"matti, Visaosang Building\n"
+"                                                        <br>District, NY "
+"Accums, North American\"\n"
+"                                                        "
+msgstr ""
+"\n"
+"                                            Bu joyga sayt mazmuni "
+"joylashtiriladi. Ma'lumotlar bazasi yangilanmoqda. Iltimos, biroz kuting.\n"
+"Agar muammo davom etsa, sayt administratori bilan bog‘laning.\n"
+"                                        "
+
+#: templates/contact.html:81
+#, fuzzy
+#| msgid "Hotline :"
+msgid "Hotline"
+msgstr "Ishonch telefoni:"
+
+#: templates/contact.html:97
+msgid ""
+"\n"
+"                                        Proin gravida nibh vel velit auctor "
+"aliquet. Aenean sollicudin, lorem quis bibendum\n"
+"                                        auctor, nisi elit consequat ipsum, "
+"nec sagittis sem nibh id elit. Duis sed odio sit\n"
+"                                        amet nibh vultate cursus a sit amet "
+"mauris. Proin gravida nibh vel velit auctor aliquet.\n"
+"                                        "
+msgstr ""
+"\n"
+"                                        Proin gravida nibh vel velit auctor "
+"aliquet. Aenean sollicitudin, lorem quis bibendum\n"
+"                                        auctor, nisi elit consequat ipsum, "
+"nec sagittis sem nibh id elit. Duis sed odio sit\n"
+"                                        amet nibh vulputate cursus a sit "
+"amet mauris. Proin gravida nibh vel velit auctor aliquet.\n"
+"                                        "
+
+#: templates/contact.html:138
+msgid "Send message"
+msgstr "Xabar yuborish"
 
 #: templates/layout/footer.html:16
 msgid ""
@@ -54,12 +181,6 @@ msgstr "Jamoa bilan tanishing"
 #: templates/layout/footer.html:39
 msgid "Contact our buyers"
 msgstr "Xaridorlarimiz bilan bog'laning"
-
-#: templates/layout/footer.html:55
-#, fuzzy
-#| msgid "Contact"
-msgid "Contact Us"
-msgstr "Aloqa"
 
 #: templates/layout/footer.html:61
 msgid "Address :"
@@ -111,10 +232,6 @@ msgstr "To'lov qabul qilinadi"
 msgid "Search"
 msgstr "Qidiruv"
 
-#: templates/layout/header-base.html:108 templates/layout/header-home.html:98
-msgid "Home"
-msgstr "Asosiy"
-
 #: templates/layout/header-base.html:111 templates/layout/header-home.html:101
 msgid "Products"
 msgstr "Mahsulot"
@@ -126,10 +243,6 @@ msgstr "Bloglar"
 #: templates/layout/header-base.html:117 templates/layout/header-home.html:107
 msgid "About"
 msgstr "Haqimizda"
-
-#: templates/layout/header-base.html:120 templates/layout/header-home.html:110
-msgid "Contact"
-msgstr "Aloqa"
 
 #: templates/layout/header-base.html:141
 msgid "Account"

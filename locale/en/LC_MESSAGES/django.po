@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-09-10 06:41+0000\n"
+"POT-Creation-Date: 2025-09-10 09:18+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -17,6 +17,103 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: templates/blog-detail.html:21 templates/blog-list-sidebar-left.html:20
+#: templates/contact.html:19 templates/layout/header-base.html:108
+#: templates/layout/header-home.html:98
+msgid "Home"
+msgstr ""
+
+#: templates/blog-detail.html:26 templates/blog-list-sidebar-left.html:25
+msgid "Living Room"
+msgstr ""
+
+#: templates/blog-detail.html:31 templates/blog-list-sidebar-left.html:30
+msgid "Blog"
+msgstr ""
+
+#: templates/blog-detail.html:45 templates/blog-list-sidebar-left.html:44
+msgid "Categories"
+msgstr ""
+
+#: templates/blog-detail.html:80 templates/blog-list-sidebar-left.html:76
+msgid "Blog Tags"
+msgstr ""
+
+#: templates/blog-detail.html:151
+msgid "SEN TO A FRIEND"
+msgstr ""
+
+#: templates/blog-detail.html:155
+msgid "Print"
+msgstr ""
+
+#: templates/blog-detail.html:170
+msgid "Administrator, Web Designer"
+msgstr ""
+
+#: templates/blog-list-sidebar-left.html:102
+msgid "Recent Posts"
+msgstr ""
+
+#: templates/blog-list-sidebar-left.html:116
+msgid "3 minitunes ago"
+msgstr ""
+
+#: templates/blog-list-sidebar-left.html:117
+msgid "113 Comments"
+msgstr ""
+
+#: templates/blog-list-sidebar-left.html:118
+msgid "TIVATHEME"
+msgstr ""
+
+#: templates/blog-list-sidebar-left.html:134
+msgid "Previous"
+msgstr ""
+
+#: templates/contact.html:24 templates/layout/header-base.html:120
+#: templates/layout/header-home.html:110
+msgid "Contact"
+msgstr ""
+
+#: templates/contact.html:34 templates/layout/footer.html:55
+msgid "Contact Us"
+msgstr ""
+
+#: templates/contact.html:63
+msgid "Address"
+msgstr ""
+
+#: templates/contact.html:65
+msgid ""
+"\n"
+"                                                        \"23 Suspendis "
+"matti, Visaosang Building\n"
+"                                                        <br>District, NY "
+"Accums, North American\"\n"
+"                                                        "
+msgstr ""
+
+#: templates/contact.html:81
+msgid "Hotline"
+msgstr ""
+
+#: templates/contact.html:97
+msgid ""
+"\n"
+"                                        Proin gravida nibh vel velit auctor "
+"aliquet. Aenean sollicudin, lorem quis bibendum\n"
+"                                        auctor, nisi elit consequat ipsum, "
+"nec sagittis sem nibh id elit. Duis sed odio sit\n"
+"                                        amet nibh vultate cursus a sit amet "
+"mauris. Proin gravida nibh vel velit auctor aliquet.\n"
+"                                        "
+msgstr ""
+
+#: templates/contact.html:138
+msgid "Send message"
+msgstr ""
 
 #: templates/layout/footer.html:16
 msgid ""
@@ -46,10 +143,6 @@ msgstr ""
 
 #: templates/layout/footer.html:39
 msgid "Contact our buyers"
-msgstr ""
-
-#: templates/layout/footer.html:55
-msgid "Contact Us"
 msgstr ""
 
 #: templates/layout/footer.html:61
@@ -97,10 +190,6 @@ msgstr ""
 msgid "Search"
 msgstr ""
 
-#: templates/layout/header-base.html:108 templates/layout/header-home.html:98
-msgid "Home"
-msgstr ""
-
 #: templates/layout/header-base.html:111 templates/layout/header-home.html:101
 msgid "Products"
 msgstr ""
@@ -111,10 +200,6 @@ msgstr ""
 
 #: templates/layout/header-base.html:117 templates/layout/header-home.html:107
 msgid "About"
-msgstr ""
-
-#: templates/layout/header-base.html:120 templates/layout/header-home.html:110
-msgid "Contact"
 msgstr ""
 
 #: templates/layout/header-base.html:141
